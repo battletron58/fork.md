@@ -44,7 +44,7 @@ This following section is an rotation of the list of the addresses of the cluste
 ## CLUSTER 1
 
 
-The first 32 addresses of the cluster share the same Binance deposit address 0xD6e68D8BD25FD515714BC934bE0D29051783bd5C. The rest are linked to numerous addresses of the cluster, multiple times.
+The first 15 addresses of the cluster share the same Binance deposit address 0xD6e68D8BD25FD515714BC934bE0D29051783bd5C. The rest are linked to numerous addresses of the cluster, multiple times.
 
 
 ```
@@ -63,6 +63,7 @@ The first 32 addresses of the cluster share the same Binance deposit address 0xD
 0x1658065016ae444bf6d1a044569dfb6b0427e204
 0x1e5d31ad1dd262a7ff69978c6b110afdabfe633d
 0xf1112a35126c49691e8cbc2b7d1ece71feaf9b88
+
 0x34bd4c0d7dbf70a2ac00ea19e42286721ae4c2ad
 0xb4a9ae18e83c5bcc3128d88c90dd0f985d9cc59c
 0x8dc6ad375e4322364ef148d6cbab4e548749669c
@@ -73,6 +74,7 @@ The first 32 addresses of the cluster share the same Binance deposit address 0xD
 0xf61cd443edc2bb5790cb8bf5357b9078b1e5701e
 0xc85e85d918e9d0daa00dc006db47bd63c82d7cd6
 0x16327af129c8ec84a9eb31f789041944a0b9ec10
+
 0x39f5d1c9fdd13cc5ba6e950dcccd2189987765dd
 0xbdd8ea72d95418d9ac7adf92ba220d945e725748
 0xee93d59ad3830bedaa3105002ab3464e195c558d
