@@ -1,0 +1,98 @@
+# Detailed Methodology & Walkthrough
+
+After gathering as much CEX (Binance, Coinbase, Kucoin, Bybit, OKX) Hot Wallets & Gas suppliers as possible using explorers, a simple Dune SQL request gathered about 2M5 CEX deposit addresses (the address a user sends assets to in order to deposit into a CEX) were collected.
+
+With Dune Dashboard once again, I filtered the CEX deposit addresses that received funds from at least 7 addresses that interacted with Layer Zero regularly (using an unofficial Dune Dashboard). 
+
+Those 7-300 sized clusters of active L0 addresses that share the same CEX deposit address were used by a script to form bigger clusters using addresses that interacted with the addresses of the cluster but not with the CEX deposit address. To limit false positive, an address had to be directly linked to at least 4 other addresses of the cluster to join the cluster. Final clusters of less than 20 addresses (21 with the CEX deposit address) were discarded.
+
+That is the first layer of detection/proof. Every cluster has a big chunk of addresses that share the same CEX deposit address, and the addresses are linked to at least 4 other addresses of the cluster. This layer is fully automated with scripts and has, even though it's less that regular clusters due to the multiple interactions & the common CEX deposit address, a percentage of false positive addresses.
+
+This is where the second layer of detection/proof comes in handy. For every cluster in this report, every addresses has been scanned **manually**, the false positive evicted and on-chain arguments added to the description of the cluster. Those on-chain arguments are the second layer of detection/proof and varied: the addresses of the cluster executing the same transaction at the same time with the same amounts, a similar pattern of transaction for L0 activities etc... Plenty ressources were used, like LayerZero Scan, Dune, Debank, Arkham, Etherscan and else.
+
+This second layer done 100% manually, even though it is not time efficient, is a way to ensure the sybil nature of the clusters and limit the number of false positive. It's also a way to demonstrate work has been done & the report is not simply a dump of a huge list of addresses.
+
+The combination of the two layers, the cluster, the usage of the same CEX deposit address for a big part of the cluster & the similar on-chain activited manually reported makes for a good detection with as little false positive as possible.
+
+Activity predated of the Snapshot was screened over 14 blockchains: Ethereum endblock 19757726, Optimism endblock 119326917, BSC endblock 38236464, Polygon endblock 56379454, Arbi endblock 205653169, Gnosis endblock 33677943, Linea endblock 4059728, Scroll endblock 5184468, Zksync endblock 32656745, Moonbeam endblock 6045324, Moonriver endblock 6637617, FTM endblock 80127182, Base endblock 13709885, Celo endblock 25273962.
+
+Lastly, please note links on Arkham diagrams in this report are often missing. Arkham only supports 7 out of those 14 blockchains. 
+
+# Reward Address (If Eligible)
+
+
+0xEb8006791807CFD378cF33F676E8C9c3f7d4739F
+
+This is a fresh address.
+
+
+
+As the cluster are independant and a description comes with every cluster, the two following sections have been regrouped.
+
+This following section is an rotation of the list of the addresses of the cluster and its description: the CEX deposit address some of the addresses share, an Arkham diagram & the second layer of detection.
+
+
+
+# Reported Addresses & Description
+
+
+
+
+
+
+
+## CLUSTER 1
+
+
+The first 14 addresses of the cluster share the same Binance deposit address 0xD6e68D8BD25FD515714BC934bE0D29051783bd5C. The rest are linked to numerous addresses of the cluster, multiple times.
+
+
+```
+0xdd1e577965b2c1b670615a6ffed1355436b12544
+0x3066ed747b82258510cded3308308c0e403d0cdc
+0x0cfcf74538b0ca2b53207662b977bddb55cf7eb5
+0xfd0d68e2aac8b7b3217502eb2ff5b5fce1ccbf33
+0x23ae00022346c03cf978a6328c31492ea0c341e2
+0xd289681c9fe7426312652ad4930a6bb10110a34b
+0xbf263ab13f0e81d6efd9788286647c7972b56259
+0xbcd7be9ed26547a4b52fa8b1eef121267099d09e
+0xd4dac4044eb3fe0d20118617b4607e3ba791f649
+0xb8ac6244c99c6b4f727a22deb4727bf422ac3b8b
+0x7e64a4f121780261d8926514b81d2b042624fd11
+0x10a0284bed9c8971bba48d577f33050346916f59
+0x1658065016ae444bf6d1a044569dfb6b0427e204
+0x1e5d31ad1dd262a7ff69978c6b110afdabfe633d
+0xf1112a35126c49691e8cbc2b7d1ece71feaf9b88
+0x34bd4c0d7dbf70a2ac00ea19e42286721ae4c2ad
+0xb4a9ae18e83c5bcc3128d88c90dd0f985d9cc59c
+0x8dc6ad375e4322364ef148d6cbab4e548749669c
+0xbddcd3a54006120afbb12fb213bc203c2cd24f4b
+0xcdf9a75eb0d63c6ecc94eb41ded12483493da057
+0x4ceb4a23e0214f2aab28beb9150565a25dc92919
+0x56bf7b48409da3e8861654246b0558c34f972bc9
+0xf61cd443edc2bb5790cb8bf5357b9078b1e5701e
+0xc85e85d918e9d0daa00dc006db47bd63c82d7cd6
+0x16327af129c8ec84a9eb31f789041944a0b9ec10
+0x39f5d1c9fdd13cc5ba6e950dcccd2189987765dd
+0xbdd8ea72d95418d9ac7adf92ba220d945e725748
+0xee93d59ad3830bedaa3105002ab3464e195c558d
+0x27ca374bb716a812eacaa4cda4de812c6904654d
+0xa5f771c8efe2cd2ad63b9e59d54b5fb95bd3a3fa
+0xd54efe39a2e6402d65a1f693c7b875c014c8d552
+0x7495c3774b1045e2d24565b81f0e79f09d4ec829
+0x021664fac544d607f112a3292a8d57001f6e4a08
+```
+
+
+
+
+
+
+
+</details>
+
+The addresses also all have similar ENS.
+
+The address share the same CEX deposit address, are part of a cluster with multiple links between one another, and have the same on-chain activity. This is a big scale sybil operation, probably the result of scripts.
+
+
